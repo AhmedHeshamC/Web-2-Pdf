@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 300px; padding: 10px; font-family: Arial, sans-serif; font-size: 14px; }
+    label { display: block; margin-top: 10px; }
+    input, select { width: 100%; padding: 5px; margin-top: 5px; }
+    .checkbox { width: auto; }
+    button { width: 100%; padding: 10px; background: #4285f4; color: white; border: none; cursor: pointer; margin-top: 15px; }
+    button:hover { background: #3367d6; }
+    #status { margin-top: 10px; font-size: 12px; color: #666; }
+    .section { border-top: 1px solid #ccc; padding-top: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h3>Print Webpage to PDF</h3>
+
+  <div class="section">
+    <label for="filename">Filename:</label>
+    <input type="text" id="filename" placeholder="e.g., MyPage.pdf">
+
+    <label for="paperSize">Paper Size:</label>
+    <select id="paperSize">
+      <option value="A4">A4 (8.27 x 11.69 in)</option>
+      <option value="Letter">Letter (8.5 x 11 in)</option>
+      <option value="Legal">Legal (8.5 x 14 in)</option>
+    </select>
+
+    <label for="orientation">Orientation:</label>
+    <select id="orientation">
+      <option value="portrait">Portrait</option>
+      <option value="landscape">Landscape</option>
+    </select>
+  </div>
+
+  <div class="section">
+    <label>Margins (inches):</label>
+    <label for="marginTop">Top:</label>
+    <input type="number" id="marginTop" step="0.1" value="0.4" min="0">
+
+    <label for="marginBottom">Bottom:</label>
+    <input type="number" id="marginBottom" step="0.1" value="0.4" min="0">
+
+    <label for="marginLeft">Left:</label>
+    <input type="number" id="marginLeft" step="0.1" value="0.4" min="0">
+
+    <label for="marginRight">Right:</label>
+    <input type="number" id="marginRight" step="0.1" value="0.4" min="0">
+  </div>
+
+  <div class="section">
+    <label>
+      <input type="checkbox" id="includeBackground" class="checkbox" checked> Include backgrounds
+    </label>
+    <label>
+      <input type="checkbox" id="generateOutline" class="checkbox" checked> Generate document outline (TOC)
+    </label>
+    <label>
+      <input type="checkbox" id="promptSave" class="checkbox"> Prompt for save location
+    </label>
+  </div>
+
+  <button id="printBtn">Generate PDF</button>
+  <div id="status">PDF will be saved to your Downloads folder.</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+EOF </dev/null
