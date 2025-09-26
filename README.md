@@ -74,6 +74,10 @@ A Chrome browser extension that converts any webpage into a high-quality, organi
 - **Lazy Loading Support**: Automatically scrolls to load infinite scroll content
 - **Print Optimization**: Custom CSS for consistent page breaks
 - **Error Recovery**: Automatic cleanup if PDF generation fails
+- **Anti-Bot Detection Bypass**: Advanced techniques for protected websites
+- **DOM Content Extraction**: Fallback mechanism for complex pages
+- **Smart Resource Management**: Automatic cleanup and memory optimization
+- **Multi-Method Generation**: Multiple approaches to ensure successful PDF creation
 
 ## Technical Details
 
@@ -82,9 +86,12 @@ A Chrome browser extension that converts any webpage into a high-quality, organi
 1. **Debugger Attachment**: The extension attaches Chrome's debugger to the current tab
 2. **Viewport Configuration**: Sets a large viewport to ensure all content renders
 3. **Content Loading**: Automatically scrolls to load lazy-loaded content
-4. **CSS Injection**: Adds custom print styles for professional formatting
-5. **PDF Generation**: Uses Chrome's `Page.printToPDF` command
-6. **File Download**: Saves the PDF with automatic filename generation
+4. **Anti-Bot Bypass**: Removes event listeners and protections for difficult websites
+5. **CSS Injection**: Adds custom print styles for professional formatting
+6. **PDF Generation**: Uses Chrome's `Page.printToPDF` command
+7. **Fallback Mechanisms**: If PDF generation fails, attempts DOM content extraction
+8. **File Download**: Saves the PDF with automatic filename generation
+9. **Resource Cleanup**: Properly detaches debugger and cleans up resources
 
 ### Chrome APIs Used
 
@@ -200,10 +207,24 @@ If you encounter issues:
 
 ## Changelog
 
-### Version 1.0
+### Version 1.0 (Updated)
 - Initial release
-- Basic PDF generation functionality
-- Customizable paper size and orientation
-- Margin configuration
-- Background and outline options
-- Automatic filename generation
+- Core PDF generation using Chrome's native PDF rendering engine
+- Customizable paper size (A4, Letter, Legal) and orientation
+- Margin configuration with 0.1 inch precision
+- Background preservation and document outline generation
+- Automatic filename generation and custom filename support
+- Lazy loading content support with automatic scrolling
+- Enhanced error handling and fallback mechanisms
+- Anti-bot detection bypass for protected websites
+- DOM content extraction fallback for complex pages
+- Print optimization CSS injection for professional formatting
+- Smart cleanup and recovery procedures
+
+### Recent Enhancements
+- **Improved Error Handling**: Multiple fallback mechanisms for difficult-to-print websites
+- **Anti-Bot Detection**: Advanced bypass techniques for protected content
+- **Content Extraction**: Alternative methods when standard PDF generation fails
+- **Performance Optimization**: Reduced memory usage and faster processing
+- **UI Improvements**: Better status messages and user feedback
+- **Security Enhancements**: Debugger cleanup and resource management
